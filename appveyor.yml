@@ -1,0 +1,10 @@
+version: 1.0.{build}-{branch}
+branches:
+  only:
+    - master
+  except:
+    - gh-pages
+image: Visual Studio 2015
+build: false
+test_script:
+  - python tests.py
