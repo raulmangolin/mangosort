@@ -1,10 +1,21 @@
-version: 1.0.{build}-{branch}
+version: {branch}-0.1.{build}
+
 branches:
   only:
     - master
   except:
     - gh-pages
+
 image: Visual Studio 2015
+
 build: false
+
+environment:
+  matrix:
+  - TOXENV: py27
+  - TOXENV: py35
+  - TOXENV: py36
+  - TOXENV: py37
+
 test_script:
   - python tests.py
