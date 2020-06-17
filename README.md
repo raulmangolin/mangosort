@@ -6,44 +6,51 @@
 
 ## Hot to use
 #### Sort by multiple directions:
+To sort by different directions at same time you need to pass a list of dictionary keys with values `False` or `True`. 
+* False: ASC
+* True: DESC (reverse)    
 
-    >>> from mangosort import mangosort
-    >>> 
-    >>> my_list =  [{'code': 'beta', 'number': 3}, 
-                    {'code': 'delta', 'number': 2},
-                    {'code': 'delta', 'number': 3}]
-    >>> mangosort.sort_by_key(my_list, [{'code': True}, {'number': False}])
-    
-    [{'code': 'delta', 'number': 2}, 
-    {'code': 'delta', 'number': 3}, 
-    {'code': 'beta', 'number': 3}]
+```
+from mangosort import mangosort
+ 
+my_list =  [{'code': 'beta', 'number': 3}, 
+            {'code': 'delta', 'number': 2},
+            {'code': 'delta', 'number': 3}]
+mangosort.sort_by_key_asc(my_list, ['code', 'number'])
+
+[{'code': 'delta', 'number': 2}, 
+{'code': 'delta', 'number': 3}, 
+{'code': 'beta', 'number': 3}]
+```
     
 #### Sort by ASC:
+```
+from mangosort import mangosort
+ 
+my_list =  [{'code': 'beta', 'number': 3}, 
+            {'code': 'delta', 'number': 2},
+            {'code': 'delta', 'number': 3}]
+mangosort.sort_by_key_asc(my_list, ['code', 'number'])
 
-    >>> from mangosort import mangosort
-    >>> 
-    >>> my_list =  [{'code': 'beta', 'number': 3}, 
-                    {'code': 'delta', 'number': 2},
-                    {'code': 'delta', 'number': 3}]
-    >>> mangosort.sort_by_key_asc(my_list, ['code', 'number'])
-    
-    [{'code': 'beta', 'number': 3}, 
-    {'code': 'delta', 'number': 2}, 
-    {'code': 'delta', 'number': 3}]
+[{'code': 'beta', 'number': 3}, 
+{'code': 'delta', 'number': 2}, 
+{'code': 'delta', 'number': 3}]
+```
 
 #### Sort by DESC:
+```
+from mangosort import mangosort
+ 
+my_list =  [{'code': 'beta', 'number': 3}, 
+            {'code': 'delta', 'number': 2},
+            {'code': 'delta', 'number': 3}]
+mangosort.sort_by_key_asc(my_list, ['code', 'number'])
 
-    >>> from mangosort import mangosort
-    >>> 
-    >>> my_list =  [{'code': 'beta', 'number': 3}, 
-                    {'code': 'delta', 'number': 2},
-                    {'code': 'delta', 'number': 3}]
-    >>> mangosort.sort_by_key_desc(my_list, ['code', 'number'])
-    
-    [{'code': 'delta', 'number': 3}, 
-    {'code': 'delta', 'number': 2}, 
-    {'code': 'beta', 'number': 3}]
+[{'code': 'delta', 'number': 3}, 
+{'code': 'delta', 'number': 2}, 
+{'code': 'beta', 'number': 3}]
+```
 
-## Install
+## How to Install
 #### Install via PyPi
     pip install mangosort
