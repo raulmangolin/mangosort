@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 from setuptools import setup
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
     name='mangosort',
     version='0.1.0',
@@ -10,6 +13,8 @@ setup(
     author_email='eu@raulmangolin.com',
     keywords='dictionary dict list sort keysort',
     description=u'Sort list by multiple keys and directions',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     packages=['mangosort'],
     install_requires=[],
 )
