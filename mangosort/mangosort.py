@@ -7,7 +7,7 @@ def sort_by_key(my_list=[], keys=[]):
             [{'code': 'beta', 'number': 3}, {'code': 'delta', 'number': 2}]
 
         :param (list) keys: list of keys and direction to order.
-            eg: [{'code': True'}, {'number': False}]
+            eg: [{'code': True}, {'number': False}]
 
     Returns:
         :return (list) my_list: your list reordered
